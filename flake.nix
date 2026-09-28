@@ -1,5 +1,5 @@
 {
-  description = "Nix packaging for HpcRegistrar";
+  description = "Nix packaging for TongjiHpcRegistrar";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -20,7 +20,7 @@
           package = nixpkgs.legacyPackages.${system}.callPackage ./package { };
         in
         {
-          hpc-registrar = package;
+          tongji-hpc-registrar = package;
           default = package;
         }
       );

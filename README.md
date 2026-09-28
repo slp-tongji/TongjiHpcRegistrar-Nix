@@ -1,30 +1,30 @@
-# HpcRegistrar-Nix
+# TongjiHpcRegistrar-Nix
 
-Nix packaging for [HpcRegistrar](https://github.com/slp-tongji/HpcRegistrar) — an ASP.NET Core web application for registering and provisioning isolated HPC spaces over SSH.
+Nix packaging for [TongjiHpcRegistrar](https://github.com/slp-tongji/TongjiHpcRegistrar) — an ASP.NET Core web application for registering and provisioning isolated HPC spaces over SSH.
 
 ## Adding as a flake input
 
 ```nix
 {
   inputs = {
-    hpc-registrar.url = "github:slp-tongji/HpcRegistrar-Nix";
+    tongji-hpc-registrar.url = "github:slp-tongji/TongjiHpcRegistrar-Nix";
   };
 }
 ```
 
 ## Package
 
-The binary is exposed as `HpcRegistrar`:
+The binary is exposed as `TongjiHpcRegistrar`:
 
 ```nix
-hpc-registrar.packages.${system}.hpc-registrar
+tongji-hpc-registrar.packages.${system}.tongji-hpc-registrar
 ```
 
 Or try it directly from the CLI:
 
 ```console
-$ nix shell github:slp-tongji/HpcRegistrar-Nix
-$ HpcRegistrar \
+$ nix shell github:slp-tongji/TongjiHpcRegistrar-Nix
+$ TongjiHpcRegistrar \
     --listen http://0.0.0.0:8080 \
     --oidc https://dex.example.com \
     --oidc-id my-client \

@@ -6,17 +6,17 @@
 }:
 
 buildDotnetModule (finalAttrs: {
-  pname = "hpc-registrar";
-  version = "0.0.1";
+  pname = "tongji-hpc-registrar";
+  version = "0.0.2";
 
   src = fetchFromGitHub {
     owner = "slp-tongji";
-    repo = "HpcRegistrar";
+    repo = "TongjiHpcRegistrar";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-LqNhB7vrbb77M3VSUlDvVU0CGmxxKgipSBU9KWNN6pg=";
+    hash = "sha256-2Mv42IkTJ9Rm+nSiT9J1taRFl7y9Twvv9xGqKTWE3IM=";
   };
 
-  projectFile = "src/HpcRegistrar/HpcRegistrar.csproj";
+  projectFile = "src/TongjiHpcRegistrar/TongjiHpcRegistrar.csproj";
   dotnet-sdk = dotnetCorePackages.sdk_10_0;
   dotnet-runtime = dotnetCorePackages.aspnetcore_10_0;
 
@@ -27,9 +27,9 @@ buildDotnetModule (finalAttrs: {
 
   meta = {
     description = "An ASP.NET Core web application for registering and provisioning isolated HPC spaces over SSH.";
-    homepage = "https://github.com/slp-tongji/HpcRegistrar";
+    homepage = "https://github.com/slp-tongji/TongjiHpcRegistrar";
     license = lib.licenses.mit;
-    mainProgram = "HpcRegistrar";
+    mainProgram = "TongjiHpcRegistrar";
     maintainers = [ ];
   };
 })
