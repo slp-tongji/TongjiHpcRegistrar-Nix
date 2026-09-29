@@ -7,13 +7,13 @@
 
 buildDotnetModule (finalAttrs: {
   pname = "tongji-hpc-registrar";
-  version = "0.0.3";
+  version = "0.0.4";
 
   src = fetchFromGitHub {
     owner = "slp-tongji";
     repo = "TongjiHpcRegistrar";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-nb4SqK0d4g2o56cNPsfy4AqaYxm6CKQqbKRqwF+l/a0=";
+    hash = "sha256-zsiyjMrruaLcIhedlpmO2oJ0bB7G7PDrB8v0TzribAc=";
   };
 
   projectFile = "src/TongjiHpcRegistrar/TongjiHpcRegistrar.csproj";
